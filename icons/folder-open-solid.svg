@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 906.26001 521.6604"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="folder-open-solid.svg"
+   width="906.26001"
+   height="521.6604"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.3293847"
+     inkscape:cx="643.62431"
+     inkscape:cy="69.827165"
+     inkscape:window-width="1360"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <rect
+     style="fill:none;stroke-width:17.0751"
+     id="rect36"
+     width="763.5697"
+     height="521.6604"
+     x="0"
+     y="0" />
+  <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path
+     d="m 100.93276,228.6302 -74.73422,152 v -279.8 c 0,-35.3 24.181195,-64 53.923224,-64 h 98.999666 c 14.32336,0 28.05693,6.7 38.16754,18.7 l 22.32758,26.5 c 10.11061,12 23.84418,18.7 38.16753,18.7 h 98.91542 c 29.74203,0 53.92322,28.7 53.92322,64 v 32 H 147.52579 c -19.21014,0 -36.9037,12.1 -46.59303,31.8 z m 23.25439,16.1 c 4.88679,-9.9 13.73357,-15.9 23.33864,-15.9 h 337.02016 c 9.68933,0 18.5361,6.1 23.33864,16.1 4.80254,10 4.80254,22.2 -0.0842,32.1 l -94.36565,192 c -4.80253,9.8 -13.64931,15.8 -23.25439,15.8 H 53.160152 c -9.68933,0 -18.536109,-6.1 -23.338646,-16.1 -4.802537,-10 -4.802537,-22.2 0.08425,-32.1 l 94.365634,-192 z"
+     id="path2"
+     style="stroke-width:0.917905" />
+</svg>

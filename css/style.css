@@ -1,0 +1,67 @@
+.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    filter: invert(90%) brightness(500%) contrast(10%);
+    margin: 0 auto;
+}
+
+.icon:hover,
+.icon:focus,
+button:hover .icon {
+    filter: invert(100%) brightness(1000%) contrast(100%);
+}
+
+.color-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.icon:hover,
+.icon:focus,
+button:hover .color-icon {
+    filter: invert(100%) brightness(1000%) contrast(100%);
+}
+
+.icon-arrow-left-right {
+    background-image: url(../icons/arrows-left-right-solid.svg);
+}
+
+.icon-arrow-up-down {
+    background-image: url(../icons/arrows-up-down.svg);
+}
+
+.icon-xmark-solid {
+    filter: invert(100%) brightness(1000%) contrast(100%);
+    background-image: url(../icons/xmark-solid.svg);    
+}
+
+.icon-folder-open-solid {
+    filter: invert(100%) brightness(1000%) contrast(100%);
+    background-image: url(../icons/folder-open-solid.svg);    
+}
+
+.icon-download-solid {
+    filter: invert(100%) brightness(1000%) contrast(100%);
+    background-image: url(../icons/download-solid.svg);    
+}
+
+.icon-gray-scale {
+    background-image: url(../icons/gray-scale.svg);    
+}
+
+.icon-rgb-scale {
+    background-image: url(../icons/rgb-scale.svg);    
+}
+
+.icon-delete-left-solid {
+    background-image: url(../icons/delete-left-solid.svg);    
+}
+
+.icon-circle-half-stroke-solid {
+    background-image: url(../icons/circle-half-stroke-solid.svg);
+}

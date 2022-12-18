@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+    <title>Editor de Imagens</title>
+</head>
+<body class="bg-light">
+
+    <div class="container shadow-sm border rounded my-3 pb-3 bg-white">
+
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-xl-10 p-0 m-0">
+                <div class="border rounded p-3 m-2">
+                    <p class="h3">Editor de Imagens</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-6 col-xl-5 p-0 m-0">
+                <div class="border rounded p-3 m-2">
+                    <p class="h6 mb-3">Imagem Original</p>
+                    <img src="img/image-placeholder.png" id="imgOriginal" class="mx-auto d-block" style="max-width:100%;">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-xl-5 p-0 m-0">
+                <div class="border rounded p-3 m-2">
+                    <p class="h6 mb-3">Imagem Modificada</p>
+                    <img src="img/image-placeholder.png" id="imgModific" class="d-none">
+                    <canvas id="canvas" width="0" height="0" class="mx-auto d-block" style="max-width:100%;"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-xl-10 p-0 m-0">
+                <div class="border rounded p-3 m-2">
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                        <div class="col-12 col-md-6 col-xl-4 p-0 m-0">
+                            <div class="border rounded gap-2 d-md-flex justify-content-md-center p-3 h-100 text-center">
+                                <button type="button" id="btnFlipHorizontal" class="btn btn-outline-secondary align-self-center" 
+                                        data-bs-trigger="hover"
+                                        data-bs-container="body" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-placement="bottom" 
+                                        data-bs-content="Espelhar Horizontalmente">
+                                    <span class="icon icon-arrow-left-right align-middle"></span>
+                                </button>                                
+                                <button type="button" id="btnFlipVertical" class="btn btn-outline-secondary align-self-center" 
+                                        data-bs-trigger="hover" 
+                                        data-bs-container="body" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-placement="bottom" 
+                                        data-bs-content="Espelhar Verticalmente">
+                                    <span class="icon icon-arrow-up-down align-middle"></span>
+                                </button>
+                                <button type="button" id="btnGrayScale" class="btn btn-outline-secondary align-self-center" 
+                                        data-bs-trigger="hover" 
+                                        data-bs-container="body" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-placement="bottom" 
+                                        data-bs-content="Converter a imagem para tons de cinza">
+                                    <span id="labelBtnGrayScale" class="color-icon icon-gray-scale align-middle"></span>
+                                </button>
+                                <button type="button" id="btnInvertColors" class="btn btn-outline-secondary align-self-center" 
+                                        data-bs-trigger="hover" 
+                                        data-bs-container="body" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-placement="bottom" 
+                                        data-bs-content="Inverter cores da imagem">
+                                    <span class="icon icon-circle-half-stroke-solid align-middle"></span>
+                                </button>                                   
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 p-0 m-0">
+                            <div class="border rounded py-3 px-4 h-100 text-secondary">
+                                <label for="colorTones" class="form-label">Quantidade de tons</label>
+                                <div class="float-end">
+                                    <span id="colorTonesView">255</span>
+                                </div>
+                                <input type="range" class="form-range" type="range" id="colorTones" value="255" min="2" max="255">
+                            </div>                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-xl-10 p-0 m-0">
+                <div class="border rounded p-3 m-2">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <div class="d-md-flex justify-content-md-end col-12 col-md-6 col-xl-4 p-0 m-0 text-center">
+                            <label  for="fileInputImg" id="btnInputImg" class="btn btn-success me-md-2" 
+                                    data-bs-trigger="hover" 
+                                    data-bs-container="body" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-placement="bottom" 
+                                    data-bs-content="Abrir uma Imagem">
+                                <span class="icon icon-folder-open-solid align-middle"></span>
+                            </label>
+                            <input type="file" id="fileInputImg" accept="image/*" hidden/>
+                            <button type="button" id="btnSave" class="btn btn-primary me-md-2" 
+                                    data-bs-trigger="hover" 
+                                    data-bs-container="body" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-placement="bottom" 
+                                    data-bs-content="Salvar Imagem">
+                                <span class="icon icon-download-solid align-middle"></span>        
+                            </button>
+                            <button type="button" id="btnCancelChanges" class="btn btn-danger" 
+                                    data-bs-trigger="hover" 
+                                    data-bs-container="body" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-placement="bottom" 
+                                    data-bs-content="Desfazer todas as alterações">
+                                <span class="icon icon-xmark-solid align-middle"></span>    
+                            </button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/image-operations.js"></script>
+    <script src="js/file-handler.js"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+</body>
+</html>
